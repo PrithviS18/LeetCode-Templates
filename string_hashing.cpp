@@ -10,7 +10,6 @@ public:
     ll n;
 
     void Hashing(const string &s, vector<vector<ll>>& hashValues) {
-        n = s.size();
 
         for (int i = 0; i < 2; i++) {
             for (int j = 0; j < n; j++) {
@@ -42,14 +41,14 @@ public:
         return hash;
     }
 
-    
-    string shortestPalindrome(string s) {
 
+    string shortestPalindrome(string s) {
+        n = s.size();
         hash1.assign(2, vector<ll>(n));
         hash2.assign(2, vector<ll>(n));
 
         p_power.assign(2, vector<ll>(n));
-        inv.assign(2, vector<ll>(n))
+        inv.assign(2, vector<ll>(n));
         for (int i = 0; i < 2; i++) {
             p_power[i][0] = 1;
             for (int j = 1; j < n; j++) {
@@ -61,5 +60,6 @@ public:
                 inv[i][j] = (inv[i][j + 1] * base) % mods[i];
             }
         }
+        return s;
     }
 };
