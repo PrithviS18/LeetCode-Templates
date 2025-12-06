@@ -37,4 +37,22 @@ struct OrderedMultiset {
     int size() {
         return os.size();
     }
-};©leetcode
+};
+
+/*
+OrderedMultiset<int> ms;
+
+ms.insert(5);
+ms.insert(5);
+ms.insert(1);
+ms.insert(10);
+
+cout << ms.size();                  // 4
+
+cout << ms.order_of_key(5) << "\n"; // 1 (only 1 < 5)
+
+cout << ms.kth(0) << "\n";          // 1
+cout << ms.kth(1) << "\n";          // 5
+cout << ms.kth(2) << "\n";          // 5
+ms.erase_one(10);
+*/
